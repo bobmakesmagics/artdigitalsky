@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https:/extjs.org">
-            Next.js!
+            Our ArtDigitalSky!
           </a>
         </h1>
 
@@ -75,8 +75,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          Powered by{' www.artdigitalsky.com'}
         </a>
       </footer>
     </div>
