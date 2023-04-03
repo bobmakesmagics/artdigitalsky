@@ -1,84 +1,64 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import LayoutBase from '@/components/Layout/base';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https:/extjs.org">
-            Our ArtDigitalSky!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https:/extjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
+    <LayoutBase>
+      {(state) => (
+        <div className="flex min-h-screen flex-col items-center justify-center">
+          <main className="flex w-full h-[500px] flex-col items-center justify-center px-20 text-center bg-[url('/images/img/main.png')]">
+            <h1 className="text-6xl font-bold text-white">
+              Designing the future of the world
+            </h1>
+            <p className="mt-3 text-2xl text-white">
+              Innovative Web Solutions for Modern Business{' '}
             </p>
-          </a>
-
-          <a
-            href="https:/extjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercelext.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <a
+              className="font-bold text-2xl text-pink-400 uppercase backdrop-blur-md bg-white/30 p-2 rounded-md"
+              href="/"
+            >
+              Our ArtDigitalSky!
+            </a>
+          </main>
+          <div className="flex flex-col bg-cover bg-center w-full items-center justify-between py-12 px-20 text-center bg-[url('/images/background/background_1.png')]">
+            <div>
+              <h1 className="text-4xl font-bold text-white uppercase">
+                About us
+              </h1>
+            </div>
+            <div className="flex gap-10 p-8">
+              <div className="flex-auto">
+                <p className="text-white text-left text-xl">
+                  At our company, we believe that the future of business lies in
+                  the digital world. That's why we're dedicated to designing
+                  innovative web solutions that empower our clients to succeed
+                  in the online marketplace. We bring together cutting-edge
+                  technology and inspired design to create web and mobile
+                  experiences that are not only visually stunning, but also
+                  intuitive and user-friendly. Whether you're looking to launch
+                  a new website, develop a mobile app, or enhance your online
+                  presence, we have the skills and expertise to bring your
+                  vision to life. Our team of talented designers, developers,
+                  and strategists are committed to pushing the boundaries of
+                  digital design and building a better future, one website at a
+                  time. So why settle for an average online presence when you
+                  can partner with us to create something truly exceptional?
+                  Join us in designing the future of the digital world
+                </p>
+              </div>
+              {/* <div className="flex-auto">
+                <img
+                  src="/images/img/about.png"
+                  alt="About us"
+                  className="w-auto h-atuo"
+                />
+              </div> */}
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' www.artdigitalsky.com'}
-        </a>
-      </footer>
-    </div>
+      )}
+    </LayoutBase>
   );
 };
 

@@ -1,0 +1,13 @@
+.dropdownMenu {
+  top: 50px;
+  right: -24px;
+  @apply absolute  hidden min-w-[180px] flex-col  rounded-lg bg-dark-gray 
+      py-[12px] px-[12px] text-left  text-[14px] font-400 text-light-gray shadow-xl md:flex;
+}
+
+.item {
+  @apply flex cursor-pointer items-center justify-between rounded-md p-[8px] hover:bg-dark-pri/10 hover:text-dark-pri;
+}
+.item .icon {
+  @apply cursor-pointer text-[18px];
+}

@@ -1,0 +1,57 @@
+.SearchInput,
+.SearchInputDark {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @apply md:mr-[20px];
+
+  input {
+    @apply h-[100%] w-[100%] cursor-pointer truncate rounded-full
+     border border-gray-c1/50 bg-transparent py-[8px] pl-[36px] pr-[16px] text-[13px];
+    outline-offset: 0;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder {
+      color: #545377;
+      font-style: italic;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+  }
+
+  svg {
+    @apply h-[16px] text-gray-c1;
+  }
+}
+
+.SearchInputIcon {
+  @apply absolute ml-[16px];
+}
+
+.SearchInputClear {
+  @apply absolute inset-y-1/2 right-[16px] my-auto hidden cursor-pointer md:flex;
+}
+
+.SearchInputDark {
+  input {
+    @apply border border-light-gray/50;
+
+    &::placeholder {
+      @apply text-light-gray;
+    }
+  }
+
+  svg {
+    @apply text-light-gray;
+  }
+}

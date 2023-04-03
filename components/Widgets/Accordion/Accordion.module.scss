@@ -1,0 +1,17 @@
+.container {
+  @apply my-2  cursor-pointer items-center  rounded-xl border-b border-light-gray-1 
+    bg-[#eaebef26]  p-6;
+}
+
+.arrow {
+  @apply h-4 w-4 justify-end text-gray-c2;
+}
+
+.open {
+  transition: all 1s cubic-bezier(1, 0, 1, 0);
+  @apply px-6 pb-4;
+}
+
+.closed {
+  transition: all 1s cubic-bezier(0, 1, 0, 1);
+}
