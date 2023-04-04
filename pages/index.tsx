@@ -1,27 +1,43 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import LayoutBase from '@/components/Layout/base';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ImageSlider } from '@/components/Widgets/ImageSlider';
 
 const Home: NextPage = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+  };
+
+  const sliderData = [
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/main.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/2.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/3.png',
+    },
+  ];
+
   return (
     <LayoutBase>
       {(state) => (
-        <div className="flex min-h-screen flex-col items-center justify-center">
-          <main className="flex w-full h-[500px] flex-col items-center justify-center px-20 text-center bg-[url('/images/img/main.png')]">
-            <h1 className="text-6xl font-bold text-white">
-              Designing the future of the world
-            </h1>
-            <p className="mt-3 text-2xl text-white">
-              Innovative Web Solutions for Modern Business{' '}
-            </p>
-            <Link
-              className="font-bold text-2xl text-pink-400 uppercase backdrop-blur-md bg-white/30 p-2 rounded-md"
-              href="/"
-            >
-              Our ArtDigitalSky!
-            </Link>
-          </main>
+        <div className="min-h-screen">
+          <ImageSlider sliderData={sliderData} />
           <div className="flex flex-col bg-cover bg-center w-full items-center justify-between py-12 px-20 text-center bg-[url('/images/background/background_1.png')]">
             <div>
               <h1 className="text-4xl font-bold text-white uppercase">
