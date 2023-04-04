@@ -28,13 +28,13 @@ export const ImageSlider = ({ sliderData }: Props) => {
 
   return (
     <Slider {...settings}>
-      {sliderData?.map((slider: SliderData) => (
-        <div>
+      {sliderData?.map((slider: SliderData, index) => (
+        <div key={index}>
           <div
             style={{
               backgroundImage: `url(${slider.image})`,
             }}
-            className="!flex w-full h-[500px] flex-col items-center justify-center px-20 text-center"
+            className="!flex w-full h-[500px] flex-col items-center justify-center px-20 text-center bg-auto bg-center"
           >
             <h1 className="text-6xl font-bold text-white">{slider.title}</h1>
             <p className="mt-3 text-2xl text-white">{slider.description}</p>

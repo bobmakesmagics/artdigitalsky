@@ -31,6 +31,51 @@ const Home: NextPage = () => {
       description: 'Innovative Web Solutions for Modern Business',
       image: '/images/img/3.png',
     },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/4.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/5.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/7.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/8.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/10.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/11.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/14.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/15.png',
+    },
+    {
+      title: 'Designing the future of the world',
+      description: 'Innovative Web Solutions for Modern Business',
+      image: '/images/img/web.png',
+    },
   ];
 
   return (
