@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import HeadSEO from '../Common/HeadSEO';
+// import HeadSEO from '../Common/HeadSEO';
 
 const Header = dynamic(() => import('@/components/Layout/Header'));
 const Footer = dynamic(() => import('@/components/Layout/Footer'));
-const PageBlur = dynamic(() => import('@/components/Layout/PageBlur'));
+// const PageBlur = dynamic(() => import('@/components/Layout/PageBlur'));
 
 type Props = {
   children: (state?: any) => JSX.Element;
@@ -53,7 +53,7 @@ const Layout = ({
         description={description}
         ogImageUrl={ogImg}
       /> */}
-      <PageBlur onClick={onBlurClick} blurActive={blurActive} />
+      {/* <PageBlur onClick={onBlurClick} blurActive={blurActive} /> */}
       <>
         <div className="pagePadding">
           {!hideHeader && (

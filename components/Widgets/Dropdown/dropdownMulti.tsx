@@ -17,7 +17,7 @@ export const Dropdown = ({
   toggle,
   id,
   setToggle,
-  className
+  className,
 }: Props) => {
   const toggler = useRef<HTMLDivElement>(null);
 
@@ -37,7 +37,7 @@ export const Dropdown = ({
     return () => {
       document.removeEventListener('mousedown', outSideClick);
     };
-  }, [toggle]);
+  }, [toggle, id, setToggle]);
 
   return (
     <div ref={toggler} className={className} id={id}>

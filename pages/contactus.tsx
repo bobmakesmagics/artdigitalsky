@@ -24,14 +24,9 @@ const faqs = [
 const ContactUs = () => {
   const inputFile = useRef<HTMLInputElement>(null);
   const attachFile = () => {
-    console.log('attach');
     inputFile?.current?.click();
   };
 
-  useEffect(() => {
-    const divElement = inputFile.current;
-    console.log(divElement); // logs <div>I'm an element</div>
-  }, []);
   return (
     <LayoutBase>
       {(state) => (

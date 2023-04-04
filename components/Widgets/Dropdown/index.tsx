@@ -26,7 +26,7 @@ export const Dropdown = ({
   toggleOnHover = false,
   className,
   classDropdownContainer,
-  classTip
+  classTip,
 }: Props) => {
   const toggler = useRef<HTMLDivElement>(null);
 
@@ -42,7 +42,7 @@ export const Dropdown = ({
     return () => {
       document.removeEventListener('mousedown', outSideClick);
     };
-  }, []);
+  }, [setToggle]);
 
   const mouseEnterToggle = () => setToggle(true);
   const doNothing = () => setToggle(toggle);

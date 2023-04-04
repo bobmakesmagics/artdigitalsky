@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import LayoutBase from '@/components/Layout/base';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -14,12 +15,12 @@ const Home: NextPage = () => {
             <p className="mt-3 text-2xl text-white">
               Innovative Web Solutions for Modern Business{' '}
             </p>
-            <a
+            <Link
               className="font-bold text-2xl text-pink-400 uppercase backdrop-blur-md bg-white/30 p-2 rounded-md"
               href="/"
             >
               Our ArtDigitalSky!
-            </a>
+            </Link>
           </main>
           <div className="flex flex-col bg-cover bg-center w-full items-center justify-between py-12 px-20 text-center bg-[url('/images/background/background_1.png')]">
             <div>
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
             <div className="flex gap-10 p-8">
               <div className="flex-auto">
                 <p className="text-white text-left text-xl">
-                  At our company, we believe that the future of business lies in
+                  {`At our company, we believe that the future of business lies in
                   the digital world. That's why we're dedicated to designing
                   innovative web solutions that empower our clients to succeed
                   in the online marketplace. We bring together cutting-edge
@@ -44,7 +45,7 @@ const Home: NextPage = () => {
                   digital design and building a better future, one website at a
                   time. So why settle for an average online presence when you
                   can partner with us to create something truly exceptional?
-                  Join us in designing the future of the digital world
+                  Join us in designing the future of the digital world`}
                 </p>
               </div>
               {/* <div className="flex-auto">

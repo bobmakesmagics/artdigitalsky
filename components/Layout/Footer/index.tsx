@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Footer = () => {
-  const [emailAddress, setEmailAddress] = useState('');
-
   return (
     <footer className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-0">
       <div className="container items-center m-auto">

@@ -89,7 +89,12 @@ const UserMenu = ({ user }: Props) => {
         {showMoreMenu && (
           <>
             {showMoreMenuItems.map((menuItem, index) => (
-              <Link href={menuItem.href} target="_blank" className={`ml-2`}>
+              <Link
+                href={menuItem.href}
+                target="_blank"
+                className={`ml-2`}
+                key={index}
+              >
                 <span className={styles.item}>
                   {menuItem.text}
                   {menuItem.text === 'White Paper' ? (
@@ -145,7 +150,12 @@ const UserMenu = ({ user }: Props) => {
           {showMoreMenu && (
             <>
               {showMoreMenuItems.map((menuItem, index) => (
-                <a href={menuItem.href} target="_blank" className={`ml-2`}>
+                <a
+                  href={menuItem.href}
+                  target="_blank"
+                  className={`ml-2`}
+                  key={index}
+                >
                   <span className={styles.item}>
                     {menuItem.text}
                     {menuItem.text === 'White Paper' ? (
