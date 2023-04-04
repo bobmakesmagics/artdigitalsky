@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 
 const Header = dynamic(() => import('@/components/Layout/Header'));
 const Footer = dynamic(() => import('@/components/Layout/Footer'));
-// const PageBlur = dynamic(() => import('@/components/Layout/PageBlur'));
 
 type Props = {
   children: (state?: any) => JSX.Element;
@@ -29,45 +28,18 @@ const Layout = ({
   hideFooter,
   headerFixed,
   hideHeader,
-  title = 'Dcentral - Trade Property Across Virtual Worlds',
-  description = 'Frictionless transactions within and between games, driven by virtual asset property rights.',
-  ogImg,
-  url = '/',
 }: Props) => {
   const [blurActive, setBlurActive] = useState(false);
   const [blurClicked, setBlurClicked] = useState(false);
 
-  useEffect(() => {
-    if (!blurActive) setBlurClicked(false);
-  }, [blurActive]);
-
-  const onBlurClick = () => {
-    setBlurClicked(true);
-  };
-
   return (
     <>
-      {/* <HeadSEO
-        url={url}
-        title={title}
-        description={description}
-        ogImageUrl={ogImg}
-      /> */}
-      {/* <PageBlur onClick={onBlurClick} blurActive={blurActive} /> */}
-      <>
-        <div className="pagePadding">
-          {!hideHeader && (
-            <Header
-              blurClicked={blurClicked}
-              setBlurActive={setBlurActive}
-              headerFixed={headerFixed}
-            />
-          )}
+      <div className="pagePadding">
+        {!hideHeader && <Header headerFixed={headerFixed} />}
 
-          {children()}
-          {!hideFooter && <Footer />}
-        </div>
-      </>
+        {children()}
+        {!hideFooter && <Footer />}
+      </div>
     </>
   );
 };
