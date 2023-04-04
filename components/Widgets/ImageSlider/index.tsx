@@ -36,14 +36,14 @@ export const ImageSlider = ({ sliderData }: Props) => {
             }}
             className="!flex w-full h-[500px] flex-col items-center justify-center px-20 text-center bg-auto bg-center"
           >
-            <h1 className="text-6xl font-bold text-white">{slider.title}</h1>
+            {/* <h1 className="text-6xl font-bold text-white">{slider.title}</h1>
             <p className="mt-3 text-2xl text-white">{slider.description}</p>
             <Link
               className="font-bold mt-4 text-2xl text-pink-400 uppercase backdrop-blur-md bg-white/30 p-2 rounded-md"
               href="/"
             >
               Our ArtDigitalSky!
-            </Link>
+            </Link> */}
           </div>
         </div>
       ))}

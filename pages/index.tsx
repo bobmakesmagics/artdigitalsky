@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import LayoutBase from '@/components/Layout/base';
 import { ImageSlider } from '@/components/Widgets/ImageSlider';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   const settings = {
@@ -16,11 +17,6 @@ const Home: NextPage = () => {
   };
 
   const sliderData = [
-    {
-      title: 'Designing the future of the world',
-      description: 'Innovative Web Solutions for Modern Business',
-      image: '/images/img/main.png',
-    },
     {
       title: 'Designing the future of the world',
       description: 'Innovative Web Solutions for Modern Business',
@@ -82,7 +78,25 @@ const Home: NextPage = () => {
     <LayoutBase>
       {(state) => (
         <div className="min-h-screen">
-          <ImageSlider sliderData={sliderData} />
+          <main
+            style={{
+              backgroundImage: `url('/images/img/main.png')`,
+            }}
+            className="!flex w-full h-[500px] flex-col items-center justify-center px-20 text-center"
+          >
+            <h1 className="text-6xl font-bold text-white">
+              Designing the Future of Digital World
+            </h1>
+            <p className="mt-3 text-2xl text-white">
+              Innovative Web Solutions for Modern Business
+            </p>
+            <Link
+              className="font-bold mt-4 text-2xl text-pink-400 uppercase backdrop-blur-md bg-white/30 p-2 rounded-md"
+              href="/"
+            >
+              Artdigitalsky
+            </Link>
+          </main>
           <div className="flex flex-col bg-cover bg-center w-full items-center justify-between py-12 px-20 text-center bg-[url('/images/background/background_1.png')]">
             <div>
               <h1 className="text-4xl font-bold text-white uppercase">
@@ -118,6 +132,7 @@ const Home: NextPage = () => {
               </div> */}
             </div>
           </div>
+          <ImageSlider sliderData={sliderData} />
         </div>
       )}
     </LayoutBase>
