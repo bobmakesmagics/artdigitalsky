@@ -177,12 +177,12 @@ export const ContactForm = () => {
             ideas as soon as possible.
           </p>
           <h4 className="text-xl">
-            You can contact to these emails or the Whatsapp directly.
+            You can contact to these Emails or the WhatsApp directly.
           </h4>
           <div>
             <p>Email: tajana@artdigitalsky.com</p>
             <p>Email: denis@artdigitalsky.com</p>
-            <p>Whatsapp: +1 (689) 267-4035</p>
+            <p>WhatsApp: +1 (689) 267-4035</p>
           </div>
           <h4 className="text-xl">Hours</h4>
           <div>
