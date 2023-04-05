@@ -89,7 +89,6 @@ export const ContactForm = () => {
       setMessage('');
       setSubject('');
     }
-    console.log(name, email, subject, message);
   };
 
   return (
@@ -124,7 +123,7 @@ export const ContactForm = () => {
           {errors?.email && (
             <p className="text-red-500">Email cannot be empty.</p>
           )}
-          <input
+          {/* <input
             type="text"
             name="subject"
             value={subject}
@@ -134,7 +133,7 @@ export const ContactForm = () => {
           />
           {errors?.subject && (
             <p className="text-red-500">Subject cannot be empty.</p>
-          )}
+          )} */}
           <textarea
             name="message"
             placeholder="Message"

@@ -4,7 +4,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 const sendEmail = async (req: any, res: any) => {
   try {
-    const { name, email, subject, message } = JSON.parse(req.body);
+    const { name, email, message } = JSON.parse(req.body);
     const msg = `Name: ${name}\r\n Email: ${email}\r\n Message: ${message}`;
     await sendgrid.send({
       to: process.env.ADMIN_EMAIL_ADDRESS,
