@@ -32,10 +32,10 @@ export const ContactForm = () => {
       isValid = false;
     }
 
-    if (!subject?.length) {
-      tempErrors['subject'] = true;
-      isValid = false;
-    }
+    // if (!subject?.length) {
+    //   tempErrors['subject'] = true;
+    //   isValid = false;
+    // }
 
     if (!message?.length) {
       tempErrors['message'] = true;
