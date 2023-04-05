@@ -1,6 +1,6 @@
 import Client from './client';
 import { getCachedToken } from '@/utils/auth';
-import { SocialAccount, TUserData, Wallet } from 'types/typings';
+import { UserInfo } from 'types/typings';
 
 export type CreateUserProps = {
   username: string;
@@ -21,7 +21,7 @@ export type LoginUserWithMfaProps = {
 
 export const createUser = async (params: CreateUserProps) => {
   try {
-    const user: TUserData = await Client.post(
+    const user: UserInfo = await Client.post(
       `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
       {
         body: params,
@@ -29,22 +29,6 @@ export const createUser = async (params: CreateUserProps) => {
     );
 
     return user;
-  } catch (e: any) {
-    console.error('error', e);
-    throw new Error(e?.message || e);
-  }
-};
-
-export const addSocialAccount = async (params: SocialAccount) => {
-  try {
-    const account: TUserData = await Client.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/auth/addSocialAccount`,
-      {
-        body: params,
-      }
-    );
-
-    return account;
   } catch (e: any) {
     console.error('error', e);
     throw new Error(e?.message || e);
@@ -111,7 +95,7 @@ export const loginUser = async (params: LoginUserProps) => {
     return null;
   }
   try {
-    const user: TUserData = await Client.post(
+    const user: UserInfo = await Client.post(
       `${process.env.NEXT_PUBLIC_API_URL}/auth`,
       {
         body: params,
@@ -131,7 +115,7 @@ export const loginUserWithMfa = async (params: LoginUserWithMfaProps) => {
     return null;
   }
   try {
-    const user: TUserData = await Client.post(
+    const user: UserInfo = await Client.post(
       `${process.env.NEXT_PUBLIC_API_URL}/auth/mfa/auth-app/totp`,
       {
         body: params,
@@ -147,7 +131,7 @@ export const loginUserWithMfa = async (params: LoginUserWithMfaProps) => {
 
 export const verifyEmail = async (token: string) => {
   try {
-    const user: TUserData = await Client.post(
+    const user: UserInfo = await Client.post(
       `${process.env.NEXT_PUBLIC_API_URL}/auth/email/verify`,
       {
         body: { token },
@@ -224,7 +208,7 @@ export async function getWalletByAddress(address: string) {
   }
 }
 
-export async function registerWallet(wallet: Wallet) {
+export async function registerWallet(wallet: any) {
   const token = await getCachedToken();
   if (!token) {
     throw new Error('No access token');

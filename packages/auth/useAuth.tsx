@@ -8,7 +8,7 @@ import React, {
 import { NextPage } from 'next';
 import { signOut, useSession } from 'next-auth/react';
 
-import { TUserData } from '@/types/typings';
+import { UserInfo } from '@/types/typings';
 
 import { useRouter } from 'next/router';
 import Cookies from 'universal-cookie';
@@ -18,7 +18,7 @@ const cookies = new Cookies();
 const tokenKey = 'accessToken';
 
 interface ContextInterface {
-  userInfo?: TUserData;
+  userInfo?: UserInfo;
   userLoggedIn: boolean;
   error?: string;
   loading: boolean;
@@ -43,7 +43,7 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [userLoggedIn, setUserLoggedIn] = useState<boolean>(false);
-  const [userInfo, setUserInfo] = useState<TUserData>();
+  const [userInfo, setUserInfo] = useState<UserInfo>();
   const [error, setError] = useState<string>();
   const [loading, setLoading] = useState<boolean>(false);
   const { data, status } = useSession();
@@ -101,7 +101,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     }
   };
 
-  const setUserData = (user: TUserData) => {
+  const setUserData = (user: UserInfo) => {
     setUserInfo(user);
     setUserLoggedIn(true);
     setLoading(false);
