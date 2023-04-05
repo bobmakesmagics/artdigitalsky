@@ -176,6 +176,14 @@ export const ContactForm = () => {
             little about your business, and we will get back to you with some
             ideas as soon as possible.
           </p>
+          <h4 className="text-xl">
+            You can contact to these emails or the Whatsapp directly.
+          </h4>
+          <div>
+            <p>Email: tajana@artdigitalsky.com</p>
+            <p>Email: denis@artdigitalsky.com</p>
+            <p>Whatsapp: +1 (689) 267-4035</p>
+          </div>
           <h4 className="text-xl">Hours</h4>
           <div>
             <p>Monday - Friday: 9am - 5pm</p>
