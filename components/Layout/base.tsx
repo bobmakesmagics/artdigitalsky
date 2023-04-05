@@ -1,6 +1,4 @@
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
-// import HeadSEO from '../Common/HeadSEO';
 
 const Header = dynamic(() => import('@/components/Layout/Header'));
 const Footer = dynamic(() => import('@/components/Layout/Footer'));
@@ -29,9 +27,6 @@ const Layout = ({
   headerFixed,
   hideHeader,
 }: Props) => {
-  const [blurActive, setBlurActive] = useState(false);
-  const [blurClicked, setBlurClicked] = useState(false);
-
   return (
     <>
       <div className="pagePadding">

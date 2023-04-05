@@ -1,12 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import CloseIcon from '@mui/icons-material/Close';
 import { useRouter } from 'next/router';
-import styles from './Notification.module.scss';
 
 const dropIn = {
   initial: {
     y: '-150vh',
-    opacity: 0
+    opacity: 0,
   },
   animate: {
     y: 0,
@@ -16,10 +15,10 @@ const dropIn = {
       //   delay: 0.7,
       type: 'spring',
       damping: 25,
-      stiffness: 500
-    }
+      stiffness: 500,
+    },
   },
-  exit: { y: '100vh', opacity: 0 }
+  exit: { y: '100vh', opacity: 0 },
 };
 
 type Props = {
@@ -39,7 +38,7 @@ const Notification = ({
   message,
   messageStyle = 'w-full',
   timeout = 'yes',
-  btn = false
+  btn = false,
 }: Props) => {
   const router = useRouter();
 
@@ -52,7 +51,7 @@ const Notification = ({
   }
   return (
     <motion.div
-      className={`${styles.zIndex9999} absolute top-5 right-2 flex w-[95%] items-center rounded-xl border border-light-gray-1
+      className={`!z-[999] absolute top-5 right-2 flex w-[95%] items-center rounded-xl border border-light-gray-1
         bg-white p-[16px] shadow-2xl dark:border-transparent dark:bg-dark-default-1 sm:right-5 sm:w-[350px]`}
       variants={dropIn}
       initial="initial"

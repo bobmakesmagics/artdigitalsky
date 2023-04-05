@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import styles from './Accordion.module.scss';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+
 type Props = {
   title: string | JSX.Element;
   content: string | JSX.Element;

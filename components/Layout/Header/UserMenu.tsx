@@ -3,7 +3,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { useRouter } from 'next/router';
-import { TUserData } from '@/types/typings';
+import { UserInfo } from '@/types/typings';
 import styles from './UserMenu.module.scss';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -17,7 +17,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 type Props = {
-  user?: TUserData;
+  user?: UserInfo;
 };
 const UserMenu = ({ user }: Props) => {
   const { asPath } = useRouter();
